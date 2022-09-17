@@ -1,0 +1,187 @@
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- METAVERSE LABORATORY IMAGE TARGET -->
+<!-- BY: AIDA ASHRAFPOUR; METAVERSE LAB TEAM -->
+<!-- PROJECT FOR: METAVERSE LAB;UNIVERSITY OF TEHRAN KISH INTERNATIONAL CAMPUS -->
+<!-- DATE: 1401/06/25-FRIDAY,SEPTEMBER 17,2022 -->
+<!-- ------------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Meta Lab-Intro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script>
+      THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'
+    </script>
+    <script src="https://unpkg.com/aframe-text-geometry-component/dist/aframe-text-geometry-component.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+			  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		  }
+      h1{
+        text-shadow: 0 0 6px rgba(195, 0, 255, 0.5);
+      }
+      h2{
+        font-family: 'Montserrat', sans-serif;
+      }
+      a:link, a:visited {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        font-size: 1em;
+        background-color: transparent;
+        color: black;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 16px;
+        padding: 10px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 2px 16px rgba(195, 0, 255, 0.5);
+      }
+
+      a:hover, a:active {
+        background-color: rgb(130, 1, 145);
+        color: white;
+      }
+
+      #dom-overlay-message {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 1em;
+        background: #33333355;
+        border-top: 5px solid #ffffff55;
+        color: white;
+      }
+      #contact{
+        position: absolute;
+        left: 30px;
+      }
+
+    .a-dom-overlay button {
+        padding: 1em;
+        appearance: none;
+        background: #00000055;
+        border: 3px solid white;
+        border-radius: 1em;
+        margin: 1em 1em 0 0;
+        color: white;
+      }
+            
+    </style>
+
+    <!-- style for the loader -->
+    <!-- <style>
+      .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+      }
+    </style> -->
+  </head>
+
+  <body>
+
+    <!-- Dom Overlay -->
+    <div id="contact">
+      <h1>
+        Metaverse Laboratory
+      </h1>
+      <h2>Contact Us</h2>
+      <p><a href="mailto:s.sayardoost@ut.ac.ir" target="_blank">E-mail</a></p>
+      <p><a href="http://metaserv.ir/" target="_blank">Website</a></p>
+      <p><a href="https://instagram.com/metaverse_kish?igshid=YmMyMTA2M2Y=" target="_blank">Instagram</a></p>
+    </div>
+    <div id="dom-overlay">
+      <div id="dom-overlay-message">Scan Code to start.</div>
+    </div>
+    <!-- <div class="arjs-loader">
+      <div>Loading, please wait...</div>
+    </div> -->
+   
+  
+
+    <!-- <a-scene>
+      <a-assets timeout="30000">
+        <a-asset-item id="spinosaurus" src="assets/metaAnime.glb"></a-asset-item>
+      </a-assets>
+      <a-camera position="0 1.2 0"></a-camera>
+
+      <a-entity id="dino" position="0 0 0" scale="0.5 0.5 0.5">
+        <a-entity position="0 -15 -180" rotation="0 0 0" scale="0.5 0.5 0.5"
+        gltf-model="#spinosaurus"
+        animation="property:rotation; to:0 360 0; loop:true; dur:2200"
+        ></a-entity>
+        <a-entity
+              rotation="-90 0 0"
+              geometry="primitive: plane; width: 4; height: auto"
+              material="color: blue"
+              text="value: Metaverse Laboratory"></a-entity>
+      </a-entity>
+      <a-box id="playbutton_1" class="clickable" position="-5 0 0" width="2" height="2" rotation="0 -90 0" foo></a-box>
+
+
+      <!-- <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" type='barcode' value='1'>
+        <a-link href="https://instagram.com/metaverse_kish?igshid=YmMyMTA2M2Y=" title="My Homepage" image="#homeThumbnail"></a-link>
+      </a-marker> -->
+    <!-- </a-scene> --> 
+   
+    
+    <!-- <a-scene
+      vr-mode-ui="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"> -->
+      <!-- <a-entity camera></a-entity>
+    </a-scene> -->
+
+    <a-scene 
+    webxr="overlayElement:#dom-overlay;"
+		shadow="type: pcfsoft"
+    ar-cursor raycaster="objects: #my-objects *"
+    >
+    <!-- image target,marker based: type="pattern" https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html -->
+      <a-marker type="pattern" url="assets/mett.patt" id="my-objects" >
+        <!-- glb 3d model  -->
+        <a-entity
+          position="0 1 0"
+          scale="0.01 0.01 0.01"
+          rotation="0 0 4"
+          gltf-model="assets/metaAnime.glb"
+          animation="property: rotation; to: 0 -360 4; loop: true; dur: 11000"
+        ></a-entity>
+        <!-- 3d text  -->
+        <a-entity
+          text-geometry="value: Metaverse Lab; size:0.3; anchor:center; bevelEnabled:true; bevelSize: 0.02; bevelThickness: 0.02"
+          material="color: #9200E1"
+          position="-1 -1 0"
+        ></a-entity>
+        <!-- video  -->
+        <a-video src="videos/metaLab.mp4" position="0 0 0" width="3" height="1"></a-video>
+      </a-marker>
+      <!-- camera  -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
